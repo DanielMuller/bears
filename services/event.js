@@ -63,7 +63,7 @@ exports.handler = (event) => {
 }
 
 const error = (code, body) => {
-  const a = {
+  return {
     statusCode: parseInt(code),
     isBase64Encoded: false,
     headers: {
@@ -71,8 +71,6 @@ const error = (code, body) => {
     },
     body: JSON.stringify(body)
   }
-  console.log(a)
-  return a
 }
 
 const getTimings = startTime => {
