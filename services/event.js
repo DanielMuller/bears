@@ -55,7 +55,7 @@ exports.handler = (event) => {
     return response
   })
     .catch((err) => {
-      log.error('dynamodb', { event, err })
+      log.error('dynamodb', { event, params, err })
       const timings = getTimings(startTime)
       log.info('end', { type: 'failure', timings })
       return error(500, { message: err.message })
