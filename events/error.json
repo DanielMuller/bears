@@ -1,0 +1,35 @@
+{
+  "version": "2.0",
+  "routeKey": "PUT /events/{eventName}",
+  "rawPath": "/events/abc",
+  "rawQueryString": "",
+  "headers": {
+    "accept": "*/*",
+    "content-length": "0",
+    "host": "nxqr9qqeqb.execute-api.eu-central-1.amazonaws.com",
+    "user-agent": "curl/7.68.0",
+    "x-amzn-trace-id": "Root=1-5fbe4d77-1541e1cd43c758c22709ad2a",
+    "x-forwarded-for": "93.108.205.215",
+    "x-forwarded-port": "443",
+    "x-forwarded-proto": "https"
+  },
+  "requestContext": {
+    "accountId": "688589788262",
+    "apiId": "nxqr9qqeqb",
+    "domainName": "nxqr9qqeqb.execute-api.eu-central-1.amazonaws.com",
+    "domainPrefix": "nxqr9qqeqb",
+    "http": {
+      "method": "PUT",
+      "path": "/events/abc",
+      "protocol": "HTTP/1.1",
+      "sourceIp": "93.108.205.215",
+      "userAgent": "curl/7.68.0"
+    },
+    "requestId": "WkEKpiNGFiAEMVg=",
+    "routeKey": "PUT /events/{eventName}",
+    "stage": "$default",
+    "time": "25/Nov/2020:12:26:31 +0000",
+    "timeEpoch": 1606307191200
+  },
+  "isBase64Encoded": false
+}

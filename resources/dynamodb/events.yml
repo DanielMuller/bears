@@ -1,0 +1,23 @@
+Type: AWS::DynamoDB::Table
+Properties:
+  TableName: events-#{HttpApi}
+  BillingMode: PAY_PER_REQUEST
+  AttributeDefinitions:
+    -
+      AttributeName: eventName
+      AttributeType: S
+    -
+      AttributeName: createdAt-requestId
+      AttributeType: S
+  KeySchema:
+    -
+      AttributeName: eventName
+      KeyType: HASH
+    -
+      AttributeName: createdAt-requestId
+      KeyType: RANGE
+Outputs:
+  TableName:
+    Description: 'Event store table name'
+    Value:
+      Ref: DynamodbEvents

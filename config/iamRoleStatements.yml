@@ -1,0 +1,5 @@
+- Effect: Allow
+  Action:
+    - dynamodb:PutItem
+  Resource:
+    - {"Fn::GetAtt": ["DynamodbEvents", "Arn"]}

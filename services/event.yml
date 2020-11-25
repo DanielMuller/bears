@@ -1,0 +1,11 @@
+handler: services/event.handler
+name: ${self:service}-event
+memorySize: 256
+timeout: ${self:custom.stage.lambda.timeout}
+properties:
+  logGroup:
+    RetentionInDays: "14"
+events:
+  - httpApi:
+      method: PUT
+      path: /events/{eventName}
