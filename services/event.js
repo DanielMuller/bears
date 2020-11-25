@@ -42,7 +42,7 @@ exports.handler = (event) => {
 
   log.info('store', { params })
   return dynamo.put(params).promise().then(res => {
-    log.info('store', { res })
+    log.info('dynamodb', { res })
     const response = {
       eventName,
       message: 'Your event has been recorded',
