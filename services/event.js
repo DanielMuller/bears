@@ -21,7 +21,7 @@ exports.handler = (event) => {
   let payload = null
   if ('body' in event) {
     if (event.isBase64Encoded) {
-      payload = Buffer.alloc(event.body).toString()
+      payload = JSON.parse(Buffer.alloc(event.body).toString())
     } else {
       payload = JSON.parse(event.body)
     }
